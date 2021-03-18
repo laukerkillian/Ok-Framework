@@ -1,11 +1,13 @@
 import "./stylesheet.scss"
 import {setApp, currApp} from './global';
+import {OkMenuBar} from "./Components/OkMenuBar";
 
 interface Options {
     translate?:boolean;
     widget?: HTMLElement;
     icon?: string;
     title?: string;
+    charset?:string;
 }
 
 export class Ok {
@@ -17,6 +19,8 @@ export class Ok {
     private m_translateContent: {[index: string]:any} = {};
     private m_interval: any;
     private m_icon: string;
+    private m_charset: string;
+    private m_menuBar: OkMenuBar;
 
     constructor(options: Options) {
         setApp(this);
@@ -31,8 +35,24 @@ export class Ok {
                 throw Error("Widget sent wasn't found ( widget == null )");
             }
         }
+        if(options?.icon) {
+            this.setIcon(options.icon);
+        }else{
+            this.setIcon("./assets/icon.png");
+        }
         if(options?.title) {
             this.setTitle(options.title);
+        }
+        if(options?.charset) {
+            this.setCharset(options.charset);
+        }
+
+
+        if(!document.querySelector("meta[name='viewport']")) {
+            let metaViewportEl = document.createElement("meta");
+            metaViewportEl.setAttribute("name", "viewport");
+            metaViewportEl.setAttribute("content", "width=device-width, initial-scale=1")
+            document.head.appendChild(metaViewportEl);
         }
     }
 
@@ -57,6 +77,31 @@ export class Ok {
             default:
                 throw Error('An unknown event was sent.');
         }
+    }
+
+    public charset(): string {
+        return this.m_charset;
+    }
+
+    public setCharset(charset: string): void {
+        let charsetEl = document.querySelector("meta[charset]");
+        this.m_charset = charset.toUpperCase();
+        if( !charsetEl ) { // si la balise meta pour définir le charset n'existe pas on la créer
+            charsetEl = document.createElement("meta");
+            document.head.appendChild(charsetEl);
+        }
+        charsetEl.setAttribute("charset", this.m_charset); // on lui mets la nouvelle valeur du charset
+
+    }
+
+    // widget element
+
+    public menuBar(): OkMenuBar {
+        return this.m_menuBar;
+    }
+
+    public setMenuBar(menuBar: OkMenuBar): void {
+        this.m_menuBar = menuBar;
     }
 
     // translate system
@@ -134,10 +179,29 @@ export class Ok {
     // website icon
 
     public icon(): string {
-        return document.head.querySelector("link[rel='shorcut icon']").getAttribute('href');
+        return this.m_icon;
     }
 
     public setIcon(icon: string): void {
+        fetch(icon).then((res) => {
+            if(res.ok) {
+                let App = this;
+                let iconEl = document.querySelector("link[rel='icon']");
+                if(!iconEl) {
+                    iconEl = document.createElement("link");
+                    iconEl.setAttribute("rel","icon");
+                    document.head.appendChild(iconEl);
+                }
+                if(icon.match(/\.png$/)) {
+                    iconEl.setAttribute("type", "image/png")
+                }else {
+                    iconEl.setAttribute("type", "")
+                }
+                iconEl.setAttribute("href", icon);
+            }else{
+                throw Error("The icon file wasn't found!");
+            }
+        })
         this.m_icon = icon;
     }
 

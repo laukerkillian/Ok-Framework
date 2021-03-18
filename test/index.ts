@@ -7,6 +7,8 @@ import {OkTrAttrs} from "../framework/Ok-tr-attribute"
 const myApp = new Ok({
     translate: true,
     widget: document.getElementById("App"),
+    charset: "UTF-8",
+    title: "Test OK framework"
 });
 
 myApp.setTranslateFile("https://raw.githubusercontent.com/laukerkillian/Ok-Framework/main/test/Languages/TR_" + myApp.language() + ".json");

@@ -1,3 +1,10 @@
+/*
+ * Author : KILLIAN KERLAU
+ * Title : Ok
+ * Description : Ok is class which contains all of your app
+ */
+
+
 import "./stylesheet.scss"
 import {setApp, currApp} from './global';
 import {OkMenuBar} from "./Components/OkMenuBar";
@@ -20,7 +27,6 @@ export class Ok {
     private m_interval: any;
     private m_icon: string;
     private m_charset: string;
-    private m_menuBar: OkMenuBar;
 
     constructor(options: Options) {
         setApp(this);
@@ -38,7 +44,7 @@ export class Ok {
         if(options?.icon) {
             this.setIcon(options.icon);
         }else{
-            this.setIcon("./assets/icon.png");
+            this.setIcon("https://raw.githubusercontent.com/laukerkillian/Ok-Framework/main/framework/assets/icon.png");
         }
         if(options?.title) {
             this.setTitle(options.title);
@@ -92,16 +98,6 @@ export class Ok {
         }
         charsetEl.setAttribute("charset", this.m_charset); // on lui mets la nouvelle valeur du charset
 
-    }
-
-    // widget element
-
-    public menuBar(): OkMenuBar {
-        return this.m_menuBar;
-    }
-
-    public setMenuBar(menuBar: OkMenuBar): void {
-        this.m_menuBar = menuBar;
     }
 
     // translate system

@@ -2,7 +2,8 @@ import { Ok } from '../framework/Ok';
 import "./stylesheets/stylesheet.scss"
 import {SecondTimer} from '../framework/Components/second-timer';
 import {OkTr} from "../framework/Components/ok-tr";
-import {OkTrAttrs} from "../framework/Ok-tr-attribute"
+import {OkTrAttrs} from "../framework/Ok-tr-attribute";
+import {OkWidget} from "../framework/Components/ok-widget";
 
 const myApp = new Ok({
     translate: true,
@@ -16,7 +17,11 @@ myApp.setTranslateFile("https://raw.githubusercontent.com/laukerkillian/Ok-Frame
 myApp.on('ready', (arg?: any) => {
 
     customElements.define("second-timer", SecondTimer)
+    customElements.define("ok-widget", OkWidget)
     customElements.define("ok-tr", OkTr)
     OkTrAttrs();
 
+    let parent = new OkWidget();
+
+    myApp.widget().appendChild(parent);
 });

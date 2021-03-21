@@ -16,7 +16,9 @@
   },
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
-    "watch": "npx webpack --config webpack.config.js --watch"
+    "watch": "npx webpack --config webpack.config.js --watch",
+    "build-docs": "npx typedoc",
+    "watch-docs": "npx typedoc --watch"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
 import { Ok } from '../Ok';
-import {currApp} from '../global';
+import {currApp} from '../private/global';
 
 export class SecondTimer extends HTMLElement {
     private myApp: Ok;

@@ -6,10 +6,15 @@
 
 
 export class OkEventsEmitter {
+
+    /**
+     * @hidden
+     * @private
+     */
+    private m_events: {[index: string]:any} = {}; // contains all events
     /**
      * This class contains all you need to made event emitter
      */
-    private m_events: {[index: string]:any} = {}; // contains all events
     constructor() {
 
     }

@@ -1,4 +1,4 @@
-import {currApp} from './global';
+import {currApp} from './private/global';
 
 export function OkTrAttrs() {
     let myApp = currApp();

@@ -1,6 +1,5 @@
 import {Ok} from "../Ok";
-import {OkMenuBar} from "./OkMenuBar";
-
+/*
 interface Options {
     parent?: OkWidget
 };
@@ -20,3 +19,4 @@ export class OkWidget extends HTMLElement {
         this.m_menuBar = menuBar;
     }
 }
+*/

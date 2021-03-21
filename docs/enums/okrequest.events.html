@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>OkRequest | Ok-Framework</title>
+	<title>Events | Ok-Framework</title>
 	<meta name="description" content="Documentation for Ok-Framework">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,13 @@
 					<a href="../modules.html">Ok-Framework</a>
 				</li>
 				<li>
-					<a href="okrequest.html">OkRequest</a>
+					<a href="../modules/okrequest.html">OkRequest</a>
+				</li>
+				<li>
+					<a href="okrequest.events.html">Events</a>
 				</li>
 			</ul>
-			<h1>Module OkRequest</h1>
+			<h1>Enumeration Events</h1>
 		</div>
 	</div>
 </header>
@@ -70,64 +73,46 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumerations</h3>
+							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/okrequest.events.html" class="tsd-kind-icon">Events</a></li>
-								<li class="tsd-kind-enum tsd-parent-kind-module"><a href="../enums/okrequest.httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Classes</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/okrequest.okrequestclass.html" class="tsd-kind-icon">Ok<wbr>Request<wbr>Class</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/okrequest.options.html" class="tsd-kind-icon">Options</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/okrequest.optionsxml.html" class="tsd-kind-icon">OptionsXML</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/okrequest.response.html" class="tsd-kind-icon">Response</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Functions</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="okrequest.html#okrequest-1" class="tsd-kind-icon">Ok<wbr>Request</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="okrequest.events.html#loaded" class="tsd-kind-icon">Loaded</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="okrequest.events.html#loading" class="tsd-kind-icon">Loading</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="okrequest-1" class="tsd-anchor"></a>
-					<h3>Ok<wbr>Request</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">Ok<wbr>Request<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/okrequest.options.html" class="tsd-signature-type" data-tsd-kind="Interface">Options</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/okrequest.okrequestclass.html" class="tsd-signature-type" data-tsd-kind="Class">OkRequestClass</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/5c92473/framework/OkRequest.ts#L107">framework/OkRequest.ts:107</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>this method made and return OkRequestClass</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>options: <a href="../interfaces/okrequest.options.html" class="tsd-signature-type" data-tsd-kind="Interface">Options</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../classes/okrequest.okrequestclass.html" class="tsd-signature-type" data-tsd-kind="Class">OkRequestClass</a></h4>
-						</li>
-					</ul>
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="loaded" class="tsd-anchor"></a>
+					<h3>Loaded</h3>
+					<div class="tsd-signature tsd-kind-icon">Loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Loaded&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/5c92473/framework/OkRequest.ts#L95">framework/OkRequest.ts:95</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>When OkRequest is loaded</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="loading" class="tsd-anchor"></a>
+					<h3>Loading</h3>
+					<div class="tsd-signature tsd-kind-icon">Loading<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> = &quot;Loading&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/5c92473/framework/OkRequest.ts#L99">framework/OkRequest.ts:99</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>during loading</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -138,35 +123,47 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="components_ok_tr.html">Components/ok-<wbr>tr</a>
+						<a href="../modules/components_ok_tr.html">Components/ok-<wbr>tr</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="components_second_timer.html">Components/second-<wbr>timer</a>
+						<a href="../modules/components_second_timer.html">Components/second-<wbr>timer</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="ok.html">Ok</a>
+						<a href="../modules/ok.html">Ok</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="ok_tr_attribute.html">Ok-<wbr>tr-<wbr>attribute</a>
+						<a href="../modules/ok_tr_attribute.html">Ok-<wbr>tr-<wbr>attribute</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="okeventsemitter.html">Ok<wbr>Events<wbr>Emitter</a>
+						<a href="../modules/okeventsemitter.html">Ok<wbr>Events<wbr>Emitter</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="okrequest.html">Ok<wbr>Request</a>
+						<a href="../modules/okrequest.html">Ok<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="okurl.html">Ok<wbr>Url</a>
+						<a href="../modules/okurl.html">Ok<wbr>Url</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/okrequest.events.html" class="tsd-kind-icon">Events</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-enum tsd-parent-kind-module">
+						<a href="okrequest.events.html" class="tsd-kind-icon">Events</a>
+						<ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="okrequest.events.html#loaded" class="tsd-kind-icon">Loaded</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="okrequest.events.html#loading" class="tsd-kind-icon">Loading</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/okrequest.httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
+						<a href="okrequest.httpmethod.html" class="tsd-kind-icon">Http<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-module">
 						<a href="../classes/okrequest.okrequestclass.html" class="tsd-kind-icon">Ok<wbr>Request<wbr>Class</a>
@@ -181,7 +178,7 @@
 						<a href="../interfaces/okrequest.response.html" class="tsd-kind-icon">Response</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="okrequest.html#okrequest-1" class="tsd-kind-icon">Ok<wbr>Request</a>
+						<a href="../modules/okrequest.html#okrequest-1" class="tsd-kind-icon">Ok<wbr>Request</a>
 					</li>
 				</ul>
 			</nav>

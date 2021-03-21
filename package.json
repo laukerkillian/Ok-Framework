@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "diagram",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "css-loader": "^5.1.2",
     "sass": "^1.32.8",

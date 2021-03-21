@@ -6,8 +6,9 @@
 
 
 import "./stylesheet.scss"
-import {setApp, currApp} from './global';
-import {OkMenuBar} from "./Components/OkMenuBar";
+import {setApp, currApp} from './private/global';
+import {OkRequest} from "./OkRequest";
+import {OkUrl} from "./OkUrl";
 
 interface Options {
     translate?:boolean;
@@ -116,18 +117,19 @@ export class Ok {
 
     public setTranslateFile(translateFile: string): void {
         this.setReady(false);
-        fetch(translateFile).then(res => {
-            if(res.ok) {
-                this.m_translateFile = translateFile;
-                let App = this;
-                res.text().then(function (text) {
-                    App.setTranslateContent(JSON.parse(text));
-                    App.setReady(true);
-                });
-            }else{
-                throw Error("The translate file wasn't found!");
+        OkRequest({
+            url: OkUrl(translateFile),
+            callback: (res) => {
+                if(res.status === 200) {
+
+                    this.m_translateFile = translateFile;
+                    this.setTranslateContent(JSON.parse(res.text));
+                    this.setReady(true);
+                }else{
+                    throw Error("The translate file wasn't found!");
+                }
             }
-        });
+        })
     }
 
     public translateContent(): {[index: string]:any} {

@@ -10,6 +10,7 @@
   },
   "typedocOptions": {
     "out": "docs",
-    "entryPoints": ["./framework"]
+    "entryPoints": ["./framework"],
+    "exclude": "./framework/private"
   }
 }

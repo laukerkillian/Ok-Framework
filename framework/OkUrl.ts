@@ -1,55 +1,48 @@
-import {OkRequest} from "./OkRequest";
-import {OkEventsEmitter} from "./OkEventsEmitter";
+class OkUrl {
+    private m_url: string;
+    private m_request: Response;
 
-export class OkUrlClass extends OkEventsEmitter {
-    /**
-     * @hidden
-     * @private
-     */
-    private m_url: string = "";
-
-    /**
-     * create Url from string
-     * @param url
-     */
     constructor(url: string) {
-        super();
         this.setUrl(url);
     }
 
-    /**
-     * return if file exist or not
-     * @param callback
-     */
-    public exist(callback: (arg?:boolean)=>any) {
-        OkRequest({
-            url: this,
-            callback: (res) => {
-                callback(res.status == 200)
-            }
-        })
-    }
-
-    /**
-     * return url as string
-     */
-    public url(): string {
+    public toString(): string {
         return this.m_url;
     }
 
-    /**
-     * set url as string
-     * @param url
-     */
     public setUrl(url: string): void {
         this.m_url = url;
+        this.m_request = undefined;
+    }
+
+    public async exist(): Promise<boolean> {
+        if(!this.m_request) {
+            const request = await fetch(this.m_url);
+            this.m_request = request;
+        }
+
+        const res = this.m_request.ok;
+        return res;
+    }
+
+    public async getContent(): Promise<string> {
+        if(!this.m_request) {
+            const request = await fetch(this.m_url);
+            this.m_request = request;
+        }
+
+        const res = await this.m_request.text();
+        return res;
+    }
+
+    public async request(): Promise<Response> {
+        if(!this.m_request) {
+            const request = await fetch(this.m_url);
+            this.m_request = request;
+        }
+
+        return this.m_request;
     }
 }
 
-/**
- * create and return a OkUrlClass
- * @param url
- */
-export function OkUrl(url: string): OkUrlClass {
-    return new OkUrlClass(url);
-}
+export {OkUrl}

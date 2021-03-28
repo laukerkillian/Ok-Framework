@@ -4,8 +4,27 @@ module.exports = {
     entry: './test/index.ts',
     devtool: 'inline-source-map',
     mode: "development",
+    resolveLoader: {
+        modules: ["node_modules", path.resolve(__dirname, "loaders")]
+    },
     module: {
         rules: [
+            {
+                test: /\.ts$/,
+                loader: 'ok-translate-loader-ts',
+                exclude: /node_modules|framework|docs/,
+                options: {
+                    outdir: path.resolve(__dirname, "translators")
+                }
+            },
+            {
+                test: /\.html$/,
+                loader: 'ok-translate-loader-html',
+                exclude: /node_modules|framework|docs/,
+                options: {
+                    outdir: path.resolve(__dirname, "translators")
+                }
+            },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
@@ -25,7 +44,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.sass', '.scss', '.css'],
+        extensions: ['.html', '.ts', '.js', '.sass', '.scss', '.css'],
     },
     output: {
         filename: 'index.js',

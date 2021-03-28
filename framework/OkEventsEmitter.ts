@@ -1,11 +1,11 @@
 /*
- * Author : KILLIAN KERLAU
- * Title : OkRequest
- * Description : OkRequest is a function to make http request
- */
+* Author : KILLIAN KERLAU
+* Title : OkRequest
+* Description : OkRequest is a function to make http request
+*/
 
 
-export class OkEventsEmitter {
+class OkEventsEmitter {
 
     /**
      * @hidden
@@ -66,3 +66,5 @@ export class OkEventsEmitter {
         this.m_events[event].forEach(fireCallbacks);
     }
 }
+
+export {OkEventsEmitter}

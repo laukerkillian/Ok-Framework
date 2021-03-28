@@ -3,7 +3,7 @@
     "outDir": "./script",
     "sourceMap": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "target": "es6",
     "jsx": "react",
     "allowJs": true

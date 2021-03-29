@@ -1,7 +1,7 @@
 import {Ok} from '../Ok';
 import {currApp} from '../private/global';
 
-export class OkTr extends HTMLElement {
+class OkTr extends HTMLElement {
     private App: Ok;
     private m_text: string;
     constructor() {
@@ -17,3 +17,5 @@ export class OkTr extends HTMLElement {
         })
     }
 }
+
+export {OkTr}

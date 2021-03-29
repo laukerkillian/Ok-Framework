@@ -19,10 +19,10 @@ class OkImage {
         this.m_url = url;
     }
 
-    public async getImage(): Promise<string> {
-        const data = await (await this.m_url.request()).blob();
-        return new Promise(function (resolve, reject) {
+    public getImage(): Promise<string> {
 
+        return new Promise(async function (resolve: (arg0: string) => void) {
+            const data = await (await this.m_url.request()).blob();
             const fileReader = new FileReader();
 
             fileReader.onload = function(fileLoadedEvent) {
@@ -30,7 +30,7 @@ class OkImage {
                 resolve(srcData);
             }
             fileReader.readAsDataURL(data);
-        });
+        }.bind(this));
     }
 }
 

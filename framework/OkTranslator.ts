@@ -53,4 +53,4 @@ class OkTranslator extends OkEventsEmitter {
     }
 }
 
-export {OkTranslator, Options};
+export {OkTranslator, Options, Events};

@@ -3,6 +3,7 @@ import {OkTranslator} from "./OkTranslator";
 import {OkLanguage, Options as OkLanguageOptions} from "./OkLanguage";
 import {setApp, currApp} from "./private/global";
 import {OkUrl} from "./OkUrl";
+import {OkEventsEmitter} from "./OkEventsEmitter";
 
 interface Options {
     title?: string;
@@ -54,4 +55,4 @@ class Ok {
     }
 }
 
-export {Ok, Options as OkOptions, OkImage, OkLanguage, OkLanguageOptions, OkUrl};
+export {Ok, Options as OkOptions, OkImage, OkUrl, currApp, OkEventsEmitter};

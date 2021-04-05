@@ -3,7 +3,7 @@
  * @param time
  * time in ms
  */
-function OkWait(time: number): Promise<void> {
+async function OkWait(time: number): Promise<void> {
     return new Promise(function (success) {
         setTimeout(() => {
             success();

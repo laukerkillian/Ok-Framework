@@ -4,6 +4,7 @@ import {OkLanguage, Options as OkLanguageOptions} from "./OkLanguage";
 import {setApp, currApp} from "./private/global";
 import {OkUrl} from "./OkUrl";
 import {OkEventsEmitter} from "./OkEventsEmitter";
+import {OkWait} from "../framework/OkWait"
 
 interface Options {
     title?: string;
@@ -55,4 +56,4 @@ class Ok {
     }
 }
 
-export {Ok, Options as OkOptions, OkImage, OkUrl, currApp, OkEventsEmitter};
+export {Ok, Options as OkOptions, OkImage, OkUrl, currApp, OkEventsEmitter, OkWait};

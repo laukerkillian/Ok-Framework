@@ -18,6 +18,7 @@ class OkTr extends OkWidget {
 
     /**
      * Translate the text defined in <ok-tr>TEXT</ok-tr>
+     * @category Components
      */
     constructor() {
         super();

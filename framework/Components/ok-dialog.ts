@@ -17,7 +17,6 @@ class OkDialog extends OkWidget{
 
     /**
      * OkDialog enable to create a small window inside the navigator's window
-     * @category Components
      * @param options
      */
     constructor(options?: Options) {

@@ -6,11 +6,12 @@
     "module": "esnext",
     "target": "es6",
     "jsx": "react",
-    "allowJs": true
+    "allowJs": true,
   },
   "typedocOptions": {
     "out": "docs",
     "entryPoints": ["./framework"],
-    "exclude": "./framework/private"
+    "exclude": "./framework/private",
+    "readme": "./typedoc-required/readme.md"
   }
 }

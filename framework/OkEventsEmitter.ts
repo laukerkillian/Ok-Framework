@@ -16,7 +16,6 @@ class OkEventsEmitter {
      * This class contains all you need to made event emitter
      */
     constructor() {
-
     }
 
     /**

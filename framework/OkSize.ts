@@ -53,7 +53,7 @@ class OkSize {
      * return the current width
      */
     public width(): number {
-        return this.m_depth;
+        return this.m_width;
     }
 
     /**
@@ -88,4 +88,4 @@ class OkSize {
     }
 }
 
-export {OkSize};
+export {OkSize, Options};

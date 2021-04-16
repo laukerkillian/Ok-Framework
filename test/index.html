@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ok • Framework</title>
     <meta charset="UTF-8">
+    <title>Ok • Framework</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./index.js" defer="true"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
+
+    <template id="demo">
+        <style>
+            p {
+                color: blue;
+            }
+        </style>
+        Hey les amis
+        <p><slot name="salut"></slot></p>
+    </template>
+
+
+    <ok-widget template="demo">
+        <a slot="salut">hey Hey</a>
+    </ok-widget>
+
+    <button id="button">Call mutation</button>
+
     <div id="App">
         <button id="coucou"><ok-tr>add</ok-tr></button>
     </div>

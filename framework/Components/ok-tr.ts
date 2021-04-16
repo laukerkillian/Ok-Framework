@@ -1,6 +1,7 @@
 import {Ok} from '../Ok';
 import {currApp} from '../private/global';
 import {OkWidget} from "./ok-widget";
+import {Events as OkTranslatorEvents} from "../OkTranslator";
 
 class OkTr extends OkWidget {
     /**
@@ -28,10 +29,10 @@ class OkTr extends OkWidget {
      * @private
      * @hidden
      */
-    private connectedCallback() {
+    connectedCallback() {
         let el = this;
         this.m_text = this.innerText;
-        this.App.translator().on("translated", () => {
+        this.App.translator().on(OkTranslatorEvents.translated, () => {
             el.innerText = this.App.translator().translate(this.m_text);
         })
     }

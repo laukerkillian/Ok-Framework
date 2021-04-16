@@ -48,6 +48,15 @@ class OkTranslator extends OkEventsEmitter {
         }
     }
 
+    // rewrite
+    public on(event: Events | string, listener: (attr?:any) => any): void {
+        if(event in Events) {
+            super.on(event, listener);
+        }else{
+            throw new Error("The event send doesn't exist on this object!")
+        }
+    }
+
     private registerEvents(): void {
         this.on(Events.translated, () => {})
     }

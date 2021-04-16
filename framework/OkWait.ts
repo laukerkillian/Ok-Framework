@@ -1,5 +1,8 @@
 /**
  * pause during a time
+ * ```typescript
+ *  await OkWait(500); // wait 500ms
+ * ```
  * @param time
  * time in ms
  */

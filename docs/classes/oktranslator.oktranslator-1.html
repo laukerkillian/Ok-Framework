@@ -102,7 +102,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="oktranslator.oktranslator-1.html#emit" class="tsd-kind-icon">emit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="oktranslator.oktranslator-1.html#on" class="tsd-kind-icon">on</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="oktranslator.oktranslator-1.html#on" class="tsd-kind-icon">on</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="oktranslator.oktranslator-1.html#registerevents" class="tsd-kind-icon">register<wbr>Events</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="oktranslator.oktranslator-1.html#removelistener" class="tsd-kind-icon">remove<wbr>Listener</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="oktranslator.oktranslator-1.html#seturl" class="tsd-kind-icon">set<wbr>Url</a></li>
@@ -126,7 +126,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="okeventsemitter.okeventsemitter-1.html">OkEventsEmitter</a>.<a href="okeventsemitter.okeventsemitter-1.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L18">framework/OkTranslator.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L18">framework/OkTranslator.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -148,7 +148,7 @@
 					<div class="tsd-signature tsd-kind-icon">m_<wbr>content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> = {}</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L18">framework/OkTranslator.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L18">framework/OkTranslator.ts:18</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -166,7 +166,7 @@
 					<div class="tsd-signature tsd-kind-icon">m_<wbr>url<span class="tsd-signature-symbol">:</span> <a href="okurl.okurl-1.html" class="tsd-signature-type" data-tsd-kind="Class">OkUrl</a><span class="tsd-signature-symbol"> = ...</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L17">framework/OkTranslator.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L17">framework/OkTranslator.ts:17</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -184,7 +184,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="okeventsemitter.okeventsemitter-1.html">OkEventsEmitter</a>.<a href="okeventsemitter.okeventsemitter-1.html#emit">emit</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkEventsEmitter.ts#L57">framework/OkEventsEmitter.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkEventsEmitter.ts#L57">framework/OkEventsEmitter.ts:57</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -205,43 +205,38 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="on" class="tsd-anchor"></a>
 					<h3>on</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>attr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="okeventsemitter.okeventsemitter-1.html">OkEventsEmitter</a>.<a href="okeventsemitter.okeventsemitter-1.html#on">on</a></p>
+								<p>Overrides <a href="okeventsemitter.okeventsemitter-1.html">OkEventsEmitter</a>.<a href="okeventsemitter.okeventsemitter-1.html#on">on</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkEventsEmitter.ts#L28">framework/OkEventsEmitter.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L52">framework/OkTranslator.ts:52</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>this method register an event</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>event: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>listener: <span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
+									<h5>listener: <span class="tsd-signature-symbol">(</span>attr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-signature">
 											<ul class="tsd-signatures tsd-kind-type-literal">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>attr<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
 												<li class="tsd-description">
 													<h4 class="tsd-parameters-title">Parameters</h4>
 													<ul class="tsd-parameters">
 														<li>
-															<h5><span class="tsd-flag ts-flagOptional">Optional</span> arg: <span class="tsd-signature-type">any</span></h5>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> attr: <span class="tsd-signature-type">any</span></h5>
 														</li>
 													</ul>
 													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -265,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L51">framework/OkTranslator.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L60">framework/OkTranslator.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -283,7 +278,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="okeventsemitter.okeventsemitter-1.html">OkEventsEmitter</a>.<a href="okeventsemitter.okeventsemitter-1.html#removelistener">removeListener</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkEventsEmitter.ts#L41">framework/OkEventsEmitter.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkEventsEmitter.ts#L41">framework/OkEventsEmitter.ts:41</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -332,7 +327,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L40">framework/OkTranslator.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L40">framework/OkTranslator.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -355,7 +350,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L29">framework/OkTranslator.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L29">framework/OkTranslator.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -378,7 +373,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/987e7dd/framework/OkTranslator.ts#L36">framework/OkTranslator.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkTranslator.ts#L36">framework/OkTranslator.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="okurl.okurl-1.html" class="tsd-signature-type" data-tsd-kind="Class">OkUrl</a></h4>
@@ -409,6 +404,9 @@
 						<a href="../modules/ok.html">Ok</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/okarray.html">Ok<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/okeventsemitter.html">Ok<wbr>Events<wbr>Emitter</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -418,16 +416,25 @@
 						<a href="../modules/oklanguage.html">Ok<wbr>Language</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/okmultipleextends.html">Ok<wbr>Multiple<wbr>Extends</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/oksize.html">Ok<wbr>Size</a>
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/oktranslator.html">Ok<wbr>Translator</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/okunit.html">Ok<wbr>Unit</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/okurl.html">Ok<wbr>Url</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/okwait.html">Ok<wbr>Wait</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/css.html">css</a>
 					</li>
 				</ul>
 			</nav>
@@ -453,7 +460,7 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 								<a href="oktranslator.oktranslator-1.html#emit" class="tsd-kind-icon">emit</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="oktranslator.oktranslator-1.html#on" class="tsd-kind-icon">on</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -493,11 +500,12 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>

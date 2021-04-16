@@ -1,0 +1,236 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>OkMultipleExtends | Ok-Framework</title>
+	<meta name="description" content="Documentation for Ok-Framework">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Ok-Framework</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Ok-Framework</a>
+				</li>
+				<li>
+					<a href="okmultipleextends.html">OkMultipleExtends</a>
+				</li>
+			</ul>
+			<h1>Module OkMultipleExtends</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="okmultipleextends.html#okmultipleextends-1" class="tsd-kind-icon">Ok<wbr>Multiple<wbr>Extends</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="okmultipleextends-1" class="tsd-anchor"></a>
+					<h3>Ok<wbr>Multiple<wbr>Extends</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">Ok<wbr>Multiple<wbr>Extends<span class="tsd-signature-symbol">(</span>baseClass<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, <span class="tsd-signature-symbol">...</span>mixins<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/laukerkillian/Ok-Framework/blob/e29a333/framework/OkMultipleExtends.ts#L39">framework/OkMultipleExtends.ts:39</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This is a complex function which should only use to has multiple extends and now the super parameters only accept Map.</p>
+								</div>
+								<pre><code class="language-ts"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Obj</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">title</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">) {</span>
+<span style="color: #000000">        </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">title</span><span style="color: #000000">)</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Obj2</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">obj</span><span style="color: #000000">: {</span><span style="color: #001080">title</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">}) {</span>
+<span style="color: #000000">        </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">obj</span><span style="color: #000000">.</span><span style="color: #001080">title</span><span style="color: #000000">)</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Obj3</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">constructor</span><span style="color: #000000">(</span><span style="color: #001080">title</span><span style="color: #000000">: </span><span style="color: #267F99">string</span><span style="color: #000000">, </span><span style="color: #001080">age</span><span style="color: #000000">: </span><span style="color: #267F99">number</span><span style="color: #000000">) {</span>
+<span style="color: #000000">        </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">title</span><span style="color: #000000">)</span>
+<span style="color: #000000">        </span><span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">age</span><span style="color: #000000">)</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">Obj4</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #795E26">OkMultipleExtends</span><span style="color: #000000">(</span><span style="color: #001080">Obj</span><span style="color: #000000">, </span><span style="color: #001080">Obj2</span><span style="color: #000000">, </span><span style="color: #001080">Obj3</span><span style="color: #000000">) {</span>
+
+<span style="color: #000000">     </span><span style="color: #0000FF">constructor</span><span style="color: #000000">() {</span>
+<span style="color: #000000">         </span><span style="color: #0000FF">super</span><span style="color: #000000">(</span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Map</span><span style="color: #000000">([</span>
+<span style="color: #000000">             [</span><span style="color: #A31515">&quot;Obj&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;Salut&quot;</span><span style="color: #000000">]],</span>
+<span style="color: #000000">             [</span><span style="color: #A31515">&quot;Obj2&quot;</span><span style="color: #000000">, [{</span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Hey Mama&quot;</span><span style="color: #000000">}]],</span>
+<span style="color: #000000">             [</span><span style="color: #A31515">&quot;Obj3&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;Mhhhh&quot;</span><span style="color: #000000">, </span><span style="color: #098658">16</span><span style="color: #000000">]]</span>
+<span style="color: #000000">         ]));</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">obj</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">Obj4</span><span style="color: #000000">();</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>baseClass: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>mixins: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="components_ok_components.html">Components/ok-<wbr>components</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="components_ok_dialog.html">Components/ok-<wbr>dialog</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="components_ok_tr.html">Components/ok-<wbr>tr</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="components_ok_widget.html">Components/ok-<wbr>widget</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="ok.html">Ok</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okarray.html">Ok<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okeventsemitter.html">Ok<wbr>Events<wbr>Emitter</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okimage.html">Ok<wbr>Image</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="oklanguage.html">Ok<wbr>Language</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="okmultipleextends.html">Ok<wbr>Multiple<wbr>Extends</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="oksize.html">Ok<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="oktranslator.html">Ok<wbr>Translator</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okunit.html">Ok<wbr>Unit</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okurl.html">Ok<wbr>Url</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="okwait.html">Ok<wbr>Wait</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="css.html">css</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="okmultipleextends.html#okmultipleextends-1" class="tsd-kind-icon">Ok<wbr>Multiple<wbr>Extends</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

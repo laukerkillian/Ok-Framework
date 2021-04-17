@@ -18,8 +18,6 @@ window.Array.prototype.toOkArray = function() {
 }
 
 interface Options {
-    title?: string;
-    icon?: OkImage;
     urlTranslator?: OkUrl
 }
 
@@ -28,7 +26,6 @@ enum Events {
 }
 
 class Ok extends OkEventsEmitter {
-    private m_icon: OkImage = new OkImage({url: new OkUrl("")});
     private m_translator: OkTranslator = new OkTranslator();
     private m_language: OkLanguage = new OkLanguage();
 
@@ -50,27 +47,6 @@ class Ok extends OkEventsEmitter {
         if(options.urlTranslator) {
             await this.m_translator.setUrl(options.urlTranslator);
         }
-        if(options.title) {
-            this.setTitle(options.title)
-        }
-    }
-
-    public title(): string {
-        return document.title;
-    }
-
-    public setTitle(title: string): void {
-        document.title = title;
-    }
-
-    public icon(): OkImage {
-        return this.m_icon;
-    }
-
-    public setIcon(icon: OkImage): void {
-        const content = icon.getImage();
-
-        this.m_icon = icon;
     }
 
     public translator(): OkTranslator {

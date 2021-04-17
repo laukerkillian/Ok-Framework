@@ -2,8 +2,6 @@
 
 html, body {
   background: white;
-  margin: 0px;
-  padding: 0px;
   width: 100%;
   height: 100%;
 }
@@ -11,4 +9,86 @@ html, body {
 * {
   box-sizing: border-box;
   font-family: 'Varela Round', sans-serif;
+  z-index: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+ok-widget {
+  display: block;
+}
+
+ok-button {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  background-color: rgba(0,0,0, 0.90);
+  color: white;
+  line-height: 1rem;
+  border-radius: .75rem;
+  border: 1px solid transparent;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(255, 255, 255) 0px 0px 0px 4px, rgb(255, 255, 255) 0px 0px 0px 0px;
+  margin: 5px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 250ms ease-in-out;
+}
+
+ok-button:hover {
+  background: rgba(0,0,0, 0.8);
+}
+
+ok-button:active {
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgb(17, 24, 39) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  cursor: pointer;
+}
+
+ok-input {
+  min-width: 200px;
+  min-height: 20px;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: black;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-image: initial;
+  border-radius: 2px;
+}
+
+ok-dialog {
+  width: 100%;
+  height: 0;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 250ms ease-in-out;
+}
+ok-dialog ok-widget {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 300px;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
 }

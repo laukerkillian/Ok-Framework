@@ -7,28 +7,77 @@ import {OkWait} from "../OkWait";
 import {OkMultipleExtends} from "../OkMultipleExtends";
 
 enum Events {
-    HTMLContentChange = "HTMLContentChange"
+    HTMLContentChange = "HTMLContentChange",
+    click = "click",
 }
 
 interface OkWidget extends HTMLElement, OkEventsEmitter {
 
 }
 
+interface Options {
+    blockContentChange?: boolean,
+    value?: string;
+    template?: string
+}
+
 class OkWidget extends OkMultipleExtends(HTMLElement, OkEventsEmitter) {
 
-    constructor() {
+    #initialValue: string;
+
+    constructor(options?: Options) {
         super(new Map([
 
         ]));
+        this.#initialValue = this.innerHTML;
+        if(options) {
+            this.setOptions(options)
+        }
+
         this.applyCustomStyle();
         this.registerEvents()
-        this.HTMLContentChangeObserver()
+        this.readAttribute();
+    }
+
+    /**
+     * To set options
+     * @param options
+     */
+    public setOptions(options: Options): void {
+        if(options.blockContentChange) {
+            this.setAttribute("block-content-change", "true");
+        }
+        if(options.value) {
+            this.#initialValue = options.value;
+            this.setHTML(options.value);
+        }
+        if(options.template) {
+            this.setAttribute("template", options.template);
+        }
+    }
+
+    /**
+     *
+     */
+    protected readAttribute(): void {
+        if(this.getAttribute("block-content-change") === "true") {
+            this.on(Events.HTMLContentChange, () => {
+                if(this.innerHTML !== this.#initialValue) {
+                    this.innerHTML = this.#initialValue;
+                }
+            });
+        }
     }
 
     connectedCallback() {
         this.calledByConnectedCallback()
     }
 
+    /**
+     * With this method, you can define events
+     * @param event
+     * @param listener
+     */
     public on(event: Events | string, listener: (attr?:any) => any): void {
         if(event in Events) {
             super.on(event, listener);
@@ -37,12 +86,21 @@ class OkWidget extends OkMultipleExtends(HTMLElement, OkEventsEmitter) {
         }
     }
 
-    private registerEvents(): void {
-        this.on(Events.HTMLContentChange, () => {});
-    }
-
-    private HTMLContentChangeObserver() {
-
+    /**
+     *
+     * @private
+     */
+    protected registerEvents(): void {
+        for(const event in Events) {
+            this.on(event, () => {});
+        }
+        this.addEventListener("click", (e) => {
+            this.emit(Events.click, e);
+        })
+        let observer = new MutationObserver(function(mutations: any) {
+            this.emit(Events.HTMLContentChange, mutations)
+        }.bind(this));
+        observer.observe(this, { attributes: true, childList: true, characterData: true, subtree: true });
     }
 
     protected calledByConnectedCallback() {
@@ -59,14 +117,23 @@ class OkWidget extends OkMultipleExtends(HTMLElement, OkEventsEmitter) {
         }
     }
 
-    private applyCustomStyle(): void {
-        this.setStyleProperty(css.property.display, "block");
+    /**
+     * @hidden
+     * @private
+     */
+    protected applyCustomStyle(): void {
     }
 
+    /**
+     * return all attributes
+     */
     public getAttributes(): NamedNodeMap {
         return this.attributes;
     }
 
+    /**
+     * Return the current sizes of the object
+     */
     public size(): OkSize {
         let sizeRect = this.getClientRects()[0];
         return new OkSize({
@@ -75,12 +142,29 @@ class OkWidget extends OkMultipleExtends(HTMLElement, OkEventsEmitter) {
         })
     }
 
+    /**
+     * Set a value on style property
+     * @param property
+     * @param value
+     */
     public setStyleProperty(property: css.property, value: string): void {
         this.style.setProperty(property, value);
     }
 
+    /**
+     * Set the html content, look's like this.innerHTML = value;
+     * @param htmlString
+     */
     public setHTML(htmlString: string): void {
         this.innerHTML = htmlString;
+    }
+
+    /**
+     * set visible text on the element, look's like this.innerText = value;
+     * @param textString
+     */
+    public setText(textString: string): void {
+        this.innerText = textString;
     }
 
     /**

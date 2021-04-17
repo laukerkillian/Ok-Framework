@@ -1,6 +1,6 @@
 Ok-Framework
 Documentation : https://laukerkillian.github.io/ok-framework-docs.github.io/ \
------ Archived -----
+----- Archived ----- \
 We decided to archive this project because some big problem happened during this creation like :
 - SEO
 - Shadow blocking stylesheet
